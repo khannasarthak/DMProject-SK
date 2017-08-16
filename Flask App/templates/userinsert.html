@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+
+    <title>Dm Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Theater Reservation System</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for('execute') }}">Administrator</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for('user') }}">User</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <h1>Customer booking</h1>
+
+
+
+
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Booking Successful!</h4> You have booked <code>{{ tnum }}</code> tickets for <code>{{ name_show }}</code> for <code>{{ date_show }}</code> costing <code>${{ totprice }}</code>
+            <br>
+            <br>
+            <br>
+            <br> To check customer table insert use: <code>SELECT * from customer where customer_id = 'value given below'</code>
+            <br>
+            <br> To check Booking table insert use: <code>SELECT * from booking where customer_id = 'value given below'</code>
+            <br>
+            <br>
+            <a href="{{ url_for('execute') }}">
+                <button type="button" class="btn btn-danger">Advanced Query</button>
+            </a>
+
+        </div>
+        <br>
+        <a href="{{ url_for('user') }}">
+            <button type="button" class="btn btn-info">Book more tickets?</button>
+        </a>
+        <br>
+        <row>
+
+            <br>
+            <row> Your last executed query: <code> {{ query }}</code>
+                <br> Executed query for customer :<code> {{ query1 }}</code>
+                <br>
+
+            </row>
+            <br>
+
+            <table class="table table-striped table-bordered">
+                <thead>
+
+                    <tr>
+                        {% for i in columns %}
+                        <th>{{ i }}</th>
+                        {% endfor %}
+                    </tr>
+
+
+                </thead>
+
+                <tbody>
+                    {% for row in dbstuff %}
+                    <tr>
+
+                        {% for d in row %}
+                        <td>{{ d }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </row>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+
+</body>
+
+</html>

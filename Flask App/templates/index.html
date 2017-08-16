@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+
+    <title>Dm Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Theater Reservation System</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for('execute') }}">Administrator</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for('user') }}">User</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-3">Theater Reservation system</h1>
+            <hr class="my-2">
+            <p>Who are you?</p>
+            <row>
+                <a href="{{ url_for('execute') }}">
+                    <button type="button" class="btn btn-primary btn-lg">Administrator</button>
+                </a>
+                <a href="{{ url_for('user') }}">
+                    <button type="button" class="btn btn-primary btn-lg">User</button>
+                </a>
+            </row>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+
+</body>
+
+</html>
