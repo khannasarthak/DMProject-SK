@@ -7,6 +7,9 @@
 * Generated the dummy data using python faker library.
 * For more detailed explanation have a look at the [project report.](ProjectReport.pdf)
 * You can also view the walkthrough of the project in this [video.](https://www.youtube.com/watch?v=ASg02X8B7UQ&feature=youtu.be)
+
+[**Original Group repository**](https://github.com/khannasarthak/DMProject)
+
 Some images from the project.
 
 * #### Landing page
